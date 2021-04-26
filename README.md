@@ -19,4 +19,8 @@ The Filter should process a full second of music in under 100 ms (44100 frequenc
 | [60,10,45,60,1500] | [60,40,45,60,1000] |
 | [null] | error "Sound Wave Corrupted" |
 | [0] | [40] |
+| [2000] | [1000] |
+| [500] | [500] |
+| [500,500] | [500,500] |
+| [500,10] | [500,40] |
 

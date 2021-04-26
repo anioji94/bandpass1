@@ -15,5 +15,15 @@ describe Filter do
 				expect(subject.bandpass([500])).to eq([500])
 			end
 		end
+
+		context 'when taking multiple inputs' do
+			it 'should return the same input when in range' do
+				expect(subject.bandpass([500, 500])).to eq([500, 500])
+			end
+
+			it 'should return the lower limit when one frequency is too low' do
+				expect(subject.bandpass([500, 10])).to eq([500, 40])
+			end
+		end
 	end
 end

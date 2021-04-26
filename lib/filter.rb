@@ -1,11 +1,21 @@
 class Filter
 	def bandpass(input)
-		if input[0] > 1000
-			return [1000]
-		elsif input[0] < 40
-			return [40]
+		@output = []
+		input.each do |freq|
+			range(freq)
+		end
+		@output
+	end
+
+private
+
+	def range(input)
+		if input > 1000
+			@output << 1000
+		elsif input < 40
+			@output << 40
 		else
-			return input
+			@output << input
 		end
 	end
 end
