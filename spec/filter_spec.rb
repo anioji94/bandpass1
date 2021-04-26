@@ -3,12 +3,16 @@ require 'filter'
 describe Filter do
 	describe '#bandpass' do
 		context 'when taking single inputs' do
-			it 'should take an input of 0 and return 40' do
+			it 'should return lower limit when input is too low' do
 				expect(subject.bandpass([0])).to eq([40])
 			end
 
-			it 'should take an input of 2000 and return 1000' do
+			it 'should return upper limit when input is too high' do
 				expect(subject.bandpass([2000])).to eq([1000])
+			end
+
+			it 'should return same input when in range' do
+				expect(subject.bandpass([500])).to eq([500])
 			end
 		end
 	end

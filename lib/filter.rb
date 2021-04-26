@@ -4,6 +4,8 @@ class Filter
 			return [1000]
 		elsif input[0] < 40
 			return [40]
+		else
+			return input
 		end
 	end
 end
