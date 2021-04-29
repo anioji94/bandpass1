@@ -24,6 +24,10 @@ describe Filter do
 			it 'should return the lower limit when one frequency is too low' do
 				expect(subject.bandpass([500, 10])).to eq([500, 40])
 			end
+
+			it 'should return the upper limit when one frequency is too high' do
+				expect(subject.bandpass([500,2000])).to eq([500,1000])
+			end
 		end
 	end
 end

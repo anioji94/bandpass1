@@ -15,6 +15,7 @@ Upper = 1000
 The Filter should process a full second of music in under 100 ms (44100 frequencies)
 
 | Input | Output |
+|--------|---------|
 | Sound wave | Manipulated Sound wave |
 | [60,10,45,60,1500] | [60,40,45,60,1000] |
 | [null] | error "Sound Wave Corrupted" |
@@ -23,4 +24,5 @@ The Filter should process a full second of music in under 100 ms (44100 frequenc
 | [500] | [500] |
 | [500,500] | [500,500] |
 | [500,10] | [500,40] |
+| [500,2000] | [500,1000] |
 
